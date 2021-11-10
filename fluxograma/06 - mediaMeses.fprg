@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Roniel Nunes"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-06-25 05:14:22 "/>
+        <attribute name="created" value="Um9uaWVsIE51bmVzO0RFU0tUT1AtNTNBQ0ZLNDsyMDIxLTA2LTI1OyIwNDowNDowOCAiOzMzNzU="/>
+        <attribute name="edited" value="Um9uaWVsIE51bmVzO0RFU0tUT1AtNTNBQ0ZLNDsyMDIxLTA2LTI1OyIwNToxNDoyMiAiOzc7MzQ4Nw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="janeiro, fevereiro, marco, abril, media, abono" type="Real" array="False" size=""/>
+            <input variable="janeiro"/>
+            <input variable="fevereiro"/>
+            <input variable="marco"/>
+            <input variable="abril"/>
+            <assign variable="media" expression="(janeiro + fevereiro + marco + abril) / 4"/>
+            <if expression="media&gt;=5000">
+                <then>
+                    <output expression="&quot;Abono de 10%&quot;" newline="True"/>
+                    <assign variable="abono" expression="media * 1.10"/>
+                </then>
+                <else>
+                    <output expression="&quot;Abono de 3%&quot;" newline="True"/>
+                    <assign variable="abono" expression="media * 1.03"/>
+                </else>
+            </if>
+            <output expression="abono" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
